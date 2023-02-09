@@ -13,7 +13,6 @@ if(file_exists('config.ini'))
 }
 
 $configData = loadConfig();
-$configData['orderID'] = 3;
 
 $content = Db::queryOne('SELECT aboutus.*, contacts.*, metatags.*, domains.*, cta.*, headlines.*, opening_time.* FROM aboutus 
           LEFT JOIN contacts ON aboutus.order_id = contacts.order_id
